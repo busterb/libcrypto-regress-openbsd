@@ -334,6 +334,12 @@ main(int argc, char **argv)
 	AES_KEY key;
 	int ret=0;
 
+/*
+ * Disable constant address conditional warnings.
+ * The test case macro needs to handle NULL test vectors.
+ */
+#pragma GCC diagnostic ignored "-Waddress"
+#pragma GCC diagnostic push
 	TEST_CASE(1);
 	TEST_CASE(2);
 	TEST_CASE(3);
@@ -354,6 +360,7 @@ main(int argc, char **argv)
 	TEST_CASE(18);
 	TEST_CASE(19);
 	TEST_CASE(20);
+#pragma GCC diagnostic pop
 
 	return ret;
 }
