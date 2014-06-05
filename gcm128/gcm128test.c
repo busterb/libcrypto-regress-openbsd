@@ -51,7 +51,6 @@
 #include <string.h>
 
 #include <openssl/aes.h>
-#include <openssl/modes.h>
 
 #include "modes_lcl.h"
 
