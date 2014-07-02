@@ -102,7 +102,7 @@ x509_store_callback(int ok, X509_STORE_CTX *ctx)
 static void
 fatal(const char *msg)
 {
-	warnx(msg);
+	warnx("%s", msg);
 	ERR_print_errors(BIO_new_fd(STDERR_FILENO, 0));
 	exit(1);
 }
